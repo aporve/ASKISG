@@ -33,7 +33,7 @@ function injectDynamicCssToParent() {
     var parentStyles = document.createElement('style');
     parentStyles.type = 'text/css';
 
-    var parentCssStyles = '#ymFrameHolder { width: 100%; } @media only screen and (min-width: 768px) { #ymFrameHolder { width: 440px; } .cards.slick-initialized.slick-slide {max-width: 300px; min-width: 300px;} }';
+    var parentCssStyles = '#ymFrameHolder { width: 100%; } @media only screen and (min-width: 768px) { #ymFrameHolder { width: 440px; background:orange } .cards.slick-initialized .slick-slide {max-width: 300px; min-width: 300px;} }';
     if (parentStyles.styleSheet) {
       parentStyles.styleSheet.cssText = parentCssStyles;
     } else {
