@@ -33,7 +33,7 @@ function injectDynamicCssToParent() {
     var parentStyles = document.createElement('style');
     parentStyles.type = 'text/css';
 
-    var parentCssStyles = '#ymFrameHolder { width: 100%; } @media only screen and (min-width: 768px) { #ymFrameHolder { width: 440px; } #chatBoxMain {background: orange} ';
+    var parentCssStyles = '#ymFrameHolder { width: 100%;} @media only screen and (min-width: 768px) { #ymFrameHolder { width: 440px; } #chatBoxMain { z-index: 1;background: orange;}}';
     if (parentStyles.styleSheet) {
       parentStyles.styleSheet.cssText = parentCssStyles;
     } else {
@@ -182,7 +182,7 @@ window.addEventListener('message', function(eventData) {
                     var parentStyles = document.createElement('style');
                     parentStyles.type = 'text/css';
 
-                    var parentCssStyles = '#ymFrameHolder { width: 100%; } @media only screen and (min-width: 768px) { #ymFrameHolder { width: 880px; } } }';
+                    var parentCssStyles = '#ymFrameHolder { width: 100%; } @media only screen and (min-width: 768px) { #ymFrameHolder { width: 880px; } html #emailModal #chatBoxMain { z-index: 1;background: orange;}} } }';
                     if (parentStyles.styleSheet) {
                     parentStyles.styleSheet.cssText = parentCssStyles;
                     } else {
